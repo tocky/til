@@ -56,15 +56,15 @@ service ##HTTPD_SERVICE_NAME## stop
 
 ### テンプレートで使用できる項目
 
-* `templateName`, `templateDescription` – テンプレートの名前と説明を指定する。
-* `templateBasedir` – AppSpec ファイルおよびコマンドスクリプトが置かれているディレクトリを指定する。
-* `isCustomTemplate` – `true` を設定することで、ユーザによって作成されたカスタムテンプレートであることを示し `templateBasedir` を絶対パスとして扱うことを知らせる。
-* `warFileExportLocationWithinDeploymentArchive` – デプロイタスクが内部的に扱う WAR ファイル名を指定する。
-* `parameters` – このテンプレートで設定可能な項目を列挙する。上述の例の場合には `##HTTPD_SERIVCE_NAME##` というパラメータのみを持っている。
-    * ​`name` – このパラメータの名前
-    * `type` – `STRING` もしくは `INTEGER`
-    * `defaultValueAsString` – このパラメータのデフォルト値
-    * `substitutionAnchorText` – パラメータに指定された値をテンプレート内のファイルに適用するため、識別子として定義するプレースホルダの名称。実行時にプラグインは識別子として記述されている箇所を実際の値に置き換える。
-    * `constraints` – ユーザが入力したパラメータ値を検証するための制約。文字列の場合には `validationRegex` を設定でき、数値の場合には `minValue` と `maxValue` を設定できる。
+- `templateName`, `templateDescription` – テンプレートの名前と説明を指定する。
+- `templateBasedir` – AppSpec ファイルおよびコマンドスクリプトが置かれているディレクトリを指定する。
+- `isCustomTemplate` – `true` を設定することで、ユーザによって作成されたカスタムテンプレートであることを示し `templateBasedir` を絶対パスとして扱うことを知らせる。
+- `warFileExportLocationWithinDeploymentArchive` – デプロイタスクが内部的に扱う WAR ファイル名を指定する。
+- `parameters` – このテンプレートで設定可能な項目を列挙する。上述の例の場合には `##HTTPD_SERIVCE_NAME##` というパラメータのみを持っている。
+    - ​`name` – このパラメータの名前
+    - `type` – `STRING` もしくは `INTEGER`
+    - `defaultValueAsString` – このパラメータのデフォルト値
+    - `substitutionAnchorText` – パラメータに指定された値をテンプレート内のファイルに適用するため、識別子として定義するプレースホルダの名称。実行時にプラグインは識別子として記述されている箇所を実際の値に置き換える。
+    - `constraints` – ユーザが入力したパラメータ値を検証するための制約。文字列の場合には `validationRegex` を設定でき、数値の場合には `minValue` と `maxValue` を設定できる。
 
 _[AWS Toolkit for Eclipse Integration with AWS CodeDeploy (Part 3) | AWS Developer Blog](https://aws.amazon.com/jp/blogs/developer/aws-toolkit-for-eclipse-integration-with-aws-codedeploy-part-3/) を意訳_
