@@ -30,6 +30,8 @@ $ cat .git/config
 ...
 ```
 
+_初回のリポジトリ取得時 (`git svn clone`) では trunk の設定は入るものの branches は手動で追加してあげる必要がある。_
+
 まずやるべきは **Subversion リポジトリ内で直接 trunk から branches 以下にコピーすること** である (Git の感覚に慣れすぎていると、ローカルの変更をリモートに適用しそうになる…)。次に参照先リモートブランチを変更し、そのブランチに対してローカルリソースを `dcommit` する。
 
 ```sh
@@ -39,8 +41,6 @@ $ git rebase remotes/svn/myproject-branch
 $ git svn dcommit --dry-run
 $ git svn dcommit
 ```
-
-初回のリポジトリ取得時 (`git svn clone`) では trunk の設定は入るものの branches は手動で追加してあげる必要がある。
 
 ## 参考
 
